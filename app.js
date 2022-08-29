@@ -1,20 +1,23 @@
 console.log("Hello World!\n==========\n");
 
-// Exercise 1 Section
-console.log("EXERCISE 1:\n==========\n");
+let searchBtn = document.getElementById("submitSearch");
+const searchInput = document.getElementById("searchWord");
+const img = document.querySelector("img");
 
-document.getElementById("submitSearch").addEventListener("click", () => {
-  const img = document.querySelector("img");
-  const search = document.getElementById("searchWord").value;
-
+searchBtn.addEventListener("click", () => {
   fetch(
     "https://api.giphy.com/v1/gifs/translate?api_key=54f0MhTKuI2nxwD9nhEvN4ifNwephcpz&s=" +
-      search,
+      searchInput.value,
     { mode: "cors" }
   )
     .then((response) => response.json())
     .then((res) => {
+      feedbackEle.textContent = "";
       img.src = res.data.images.original.url;
+      searchInput.value = "";
     })
-    .catch((response) => console.log(response));
+    .catch((err) => {
+      console.error(err);
+      feedbackEle.textContent = err.message;
+    });
 });
