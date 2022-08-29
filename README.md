@@ -5,6 +5,8 @@ description: "JavaScript Fetch API Exercise with Steps"
 keywords: [javascript, promises, asynchronous programming, fetch api]
 ---
 
+# JavaScript Fetch API Exercise
+
 ## Objective
 
 Your objective is to display a gif to the DOM based on a user search. You will need to create a giphy account and call their developer api endpoint. Let's play around with API calls to Giphy!
