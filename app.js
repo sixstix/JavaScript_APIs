@@ -1,8 +1,9 @@
 console.log("Hello World!\n==========\n");
 
 let searchBtn = document.getElementById("submitSearch");
-const searchInput = document.getElementById("searchWord");
-const img = document.querySelector("img");
+let searchInput = document.getElementById("searchWord");
+let feedbackEle = document.getElementById("feedback");
+let img = document.querySelector("img");
 
 searchBtn.addEventListener("click", () => {
   fetch(
