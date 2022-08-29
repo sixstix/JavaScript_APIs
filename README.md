@@ -1,10 +1,3 @@
----
-title: "Exercise: JS Fetch API"
-slug: "js-fetch-api-exercise"
-description: "JavaScript Fetch API Exercise with Steps"
-keywords: [javascript, promises, asynchronous programming, fetch api]
----
-
 # JavaScript Fetch API Exercise
 
 ## Objective
